@@ -180,7 +180,7 @@ const AISkinAnalyzer = () => {
       // The backend will handle the prediction logic
       let response: Response;
       try {
-        response = await fetch(`${import.meta.env.VITE_API_URL}/api/analyze-skin`, {
+        response = await fetch(`${import.meta.env.VITE_API_URL}api/analyze-skin`, {
           method: 'POST',
           body: formData,
         });
