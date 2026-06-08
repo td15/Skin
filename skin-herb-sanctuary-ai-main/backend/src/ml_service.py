@@ -83,11 +83,9 @@ def get_candidate_model_dirs():
         dirs.append(os.path.abspath(env_model_dir))
 
     script_dir = os.path.dirname(os.path.abspath(__file__))  # backend/src
-    project_root = os.path.abspath(os.path.join(script_dir, '..', '..', '..'))
-    dirs.append(os.path.abspath(os.path.join(project_root, 'models')))
-
-    # Keep deployment bundle as fallback, since some exports are incompatible.
-    dirs.append(os.path.abspath("/Users/isa/Downloads/deployment_files"))
+    # Goes up to skin-herb-sanctuary-ai-main/models
+    repo_root = os.path.abspath(os.path.join(script_dir, '..', '..'))
+    dirs.append(os.path.join(repo_root, 'models'))
 
     seen = set()
     ordered = []
