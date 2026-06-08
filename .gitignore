@@ -1,0 +1,82 @@
+# Virtual Environments
+.venv/
+.venv310
+.venv311/
+venv/
+ENV/
+env/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Build outputs
+uploads/
+ml_service.log
+ml_service.err
+ml_service.out
+
+# Editor temp files
+*~
+*.tmp
+.history
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+
+ml_service.out
+ml_service.err
+tmp_frontend_index.html
+vite.config.ts.timestamp-*.mjs
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
