@@ -275,7 +275,7 @@ const analyzeSkin = async (req, res) => {
     try {
       // First check if ML service is available
       try {
-        const healthCheck = await axios.get('http://localhost:5001/health', { timeout: 5000 });
+        const healthCheck = await axios.get('https://skin-align-ml-service.onrender.com/health', { timeout: 5000 });
         if (healthCheck.status !== 200) {
           throw new Error('ML service is not available');
         }
@@ -309,7 +309,7 @@ const analyzeSkin = async (req, res) => {
       
       try {
         // Send request to ML service with increased timeout (90 seconds for model loading + prediction)
-        const mlResponse = await axios.post('http://localhost:5001/api/analyze-skin', formData, {
+        const mlResponse = await axios.post('https://skin-align-ml-service.onrender.com/api/analyze-skin', formData, {
           headers: {
             ...formData.getHeaders(),
             'Content-Length': contentLength
