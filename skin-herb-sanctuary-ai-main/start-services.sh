@@ -44,10 +44,13 @@ echo "Frontend PID: $frontend_pid"
 
 sleep 2
 
-printf "\nServices started:\n"
-printf "- ML service: http://localhost:5001 (PID %s)\n" "$ml_pid"
-printf "- Node backend: http://localhost:3001 (PID %s)\n" "$backend_pid"
-printf "- Frontend: http://localhost:8080 (PID %s)\n" "$frontend_pid"
-printf "\nLogs:\n- %s\n- %s\n- %s\n" "$ML_SERVICE_LOG" "$BACKEND_LOG" "$FRONTEND_LOG"
+echo "\nServices started:"
+echo "- ML service: http://localhost:5001 (PID $ml_pid)"
+echo "- Node backend: http://localhost:3001 (PID $backend_pid)"
+echo "- Frontend: http://localhost:8080 (PID $frontend_pid)"
+echo "\nLogs:"
+echo "- $ML_SERVICE_LOG"
+echo "- $BACKEND_LOG"
+echo "- $FRONTEND_LOG"
 
 echo "If the frontend does not appear immediately, wait a few seconds and refresh your browser."
